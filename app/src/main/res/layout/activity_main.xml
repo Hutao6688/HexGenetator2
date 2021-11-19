@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="只能输入一个汉字" />
+
+            <Button
+                android:id="@+id/btn_refresh_char_top"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="显示到屏幕"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            >
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:horizontalSpacing="2dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色反转"
+                android:id="@+id/btn_color_exchange"
+                android:layout_marginLeft="30dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左右翻转"
+                android:id="@+id/btn_mirror_exchange"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="旋转90度(逆时针)"
+                android:id="@+id/btn_rotate_90"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="源代码"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空屏幕"
+                />
+
+            <Button
+                android:id="@+id/btn_gene"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生成Hex"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开源软件    软件版本1.0 \n\n使用说明：使用手指在屏幕上画出您想画的图案，或用页面顶端的输入框输入一个汉字，然后点击 生成Hex按钮 即可生成。"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
