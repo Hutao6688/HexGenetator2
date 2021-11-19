@@ -14,7 +14,7 @@ import java.util.List;
 class GVAdapter extends ArrayAdapter {
 
     private Context context;
-    private List<Integer> list = new ArrayList();
+    private List<Integer> list ;
 
     GVAdapter(Context context, int textViewResourceId, List<Integer> data) {
         super(context, textViewResourceId);
@@ -36,17 +36,9 @@ class GVAdapter extends ArrayAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
 
-//                    ((LayoutInflater) getContext().getSystemService("layout_inflater"))
-//                    .inflate(R.layout.item, parent, false);
         }
 
         View v = convertView.findViewById(R.id.v_item);
-
-//        TextView txtStatus = (TextView) row.findViewById(R.id.txtStatus);item_all_load_grid
-
-//        RelativeLayout rl_main = (RelativeLayout) row.findViewById(R.id.rl_main);
-
-//        View rl_main = (RelativeLayout) row.findViewById(R.id.rl_main);
 
         if (list.get(i) == 1) {
             v.setBackgroundResource(R.drawable.bg_select);
